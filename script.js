@@ -22,17 +22,13 @@ class Produto {
                 <div> ${this.dataCadastro}</div>
                 <div> ${this.descricao}</div>
                 <div> ${ this.preco}</div>
-                <div> ${this.imagem}</div>
+                <img src= "${this.imagem}"/>
                 `
     }
  }
- const produto = new Produto("Teclado Gamer Corsair", "03/05/2023","Teclado Gamer Corsair K70 Rgb MK.2 Se Cherry Mx Speed", 1900)
-
-    console.log(produto.mostrarProduto())
-
-
- const produtoDestaque = new ProdutoDestaque ("Mouse Gamer", "03/05/2023", "Logitech Mouse Gamer G502 Hero", 693, "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSa3HwyQ8LRT1y1BuZF1S1ZgoaEAd309rSVhLgDxpNvHB1vPhnlgXFgCREZqW5s-C8Cm5v7XZVgqcld3TXDNSb2hKO444-gbXdVhnWf5MReKqwr9D5x2dJJCg&usqp=CAE")
+ const produto = new Produto("Teclado Gamer Corsair", "03/05/2023","Teclado Gamer Corsair K70 Rgb MK.2 Se Cherry Mx Speed", 1900);
+ const produtoDestaque = new ProdutoDestaque ("Mouse Gamer", "03/05/2023", "Logitech Mouse Gamer G502 Hero", 693, "mouse.jpg");
  
-    console.log(produtoDestaque())
+    console.log(produtoDestaque);
     const div = document.getElementById("produto-destaque");
-    div.insertAdjacentHTML('afterbegin', produto.mostrarProdutoDestaque());
+    div.insertAdjacentHTML('afterbegin', produtoDestaque.mostrarProdutoDestaque());
